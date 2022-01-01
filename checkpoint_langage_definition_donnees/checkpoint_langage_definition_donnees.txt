@@ -1,0 +1,8 @@
+
+CREATE TABLE Customer(Customer_id VARCHAR(20) CONSTRAINT pk-customer PRIMARY KEY,Customer_Name VARCHAR(20) CONSTRAINT nn_customer NOT NULL,Customer_tel NUMBER);
+
+CREATE TABLE Product(Product_id VARCHAR(20) CONSTRAINT pk-product PRIMARY KEY,Product_Name VARCHAR(20) CONSTRAINT nn_product NOT NULL,Price NUMBER unsigned);
+
+CREATE TABLE Orders(Customer_id VARCHAR(20) CONSTRAINT fk-customer FOREIGN KEY,Product_id VARCHAR(20) CONSTRAINT fk-product FOREIGN KEY,Quantity NUMBER,Total_amount NUMBER);
+
+
